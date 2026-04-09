@@ -1,0 +1,23 @@
+.hero{
+  width:100%;
+  height:70vh;
+
+  display:flex;
+  align-items:center;
+
+  padding-left:80px;
+
+  background-size:cover;
+  background-position:center;
+}
+
+
+@media(max-width:600px){
+
+.hero{
+  justify-content:center;
+  text-align:center;
+  height: 40vh;
+  padding:20px;
+}
+}

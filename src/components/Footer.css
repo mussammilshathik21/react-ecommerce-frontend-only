@@ -1,0 +1,82 @@
+/* FOOTER */
+
+.footer{
+background:#111;
+color:white;
+padding:15px 20px;
+margin-top:auto;
+}
+
+/* CONTAINER */
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+}
+
+/* LEFT SIDE */
+
+.about-description{
+max-width:400px;
+}
+
+.about-description h2{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.about-description p{
+font-size:13px;
+color:#ccc;
+margin-bottom:3px;
+}
+
+/* RIGHT SIDE */
+
+.footer-contact{
+text-align:right;
+}
+
+.footer-contact h3{
+font-size:16px;
+margin-bottom:8px;
+}
+
+.footer-contact p{
+font-size:13px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:8px;
+margin-bottom:5px;
+color:#ccc;
+}
+
+/* ICON STYLE */
+
+.footer-contact svg{
+font-size:14px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.footer-container{
+flex-direction:row;
+gap:15px;
+}
+
+.footer-contact{
+text-align:left;
+}
+
+.footer-contact p{
+justify-content:flex-start;
+}
+
+}
