@@ -30,10 +30,13 @@ function CartPage() {
       <h2>Your Cart</h2>
 
       {cart.length === 0 ? (
+
         <p className="empty-cart">Your cart is empty</p>
+
       ) : (
 
         <>
+
           <div className="cart-grid">
 
             {cart.map((item, index) => (
@@ -44,7 +47,13 @@ function CartPage() {
 
                 <h3>{item.name}</h3>
 
-                <p>${item.price}</p>
+                <p>₹{item.price}</p>
+
+                {item.selectedSize && (
+                  <p className="cart-size">
+                    Size: {item.selectedSize}
+                  </p>
+                )}
 
                 <button
                   className="remove-btn"
@@ -59,7 +68,7 @@ function CartPage() {
 
           </div>
 
-          <h3 className="cart-total">Total: ${total}</h3>
+          <h3 className="cart-total">Total: ₹{total}</h3>
 
           <button
             className="order-btn"

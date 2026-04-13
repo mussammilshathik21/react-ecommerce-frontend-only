@@ -18,6 +18,22 @@ const [size,setSize] = useState("");
 
 if(!product) return <h2>Product not found</h2>;
 
+const handleAddToCart = () => {
+
+  if(product.sizes && !size){
+    alert("Please select a size");
+    return;
+  }
+
+  const productWithSize = {
+    ...product,
+    selectedSize: size
+  };
+
+  addToCart(productWithSize);
+
+};
+
 return(
 
 <div className="product-page">
@@ -32,7 +48,7 @@ return(
 
 <p className="price">${product.price}</p>
 
-{/* show sizes only if available */}
+{/* SIZE SELECT */}
 
 {product.sizes && (
 
@@ -52,13 +68,14 @@ onClick={()=>setSize(s)}
 ))}
 
 </div>
+
 </>
 
 )}
 
 <button
 className="add-cart"
-onClick={()=>addToCart(product)}
+onClick={handleAddToCart}
 >
 Add To Cart
 </button>

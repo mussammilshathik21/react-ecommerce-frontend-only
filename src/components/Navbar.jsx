@@ -51,9 +51,45 @@ function Navbar() {
         <div className="nav-links">
 
           <Link to="/">Home</Link>
-          <Link to="/category/shirts">Cloths</Link>
-          <Link to="/category/shoes">Footwear</Link>
-          <Link to="/category/watch">Accessories</Link>
+
+          {/* CLOTHS DROPDOWN */}
+          <div className="dropdown">
+            <span>Cloths</span>
+
+            <div className="dropdown-menu">
+
+              <Link to="/category/shirts">Shirts</Link>
+              <Link to="/category/pants">Pants</Link>
+              <Link to="/category/tshirts">T-Shirts</Link>
+              <Link to="/category/track">Trackpants</Link>
+
+            </div>
+          </div>
+
+          {/* FOOTWEAR DROPDOWN */}
+          <div className="dropdown">
+            <span>Footwear</span>
+
+            <div className="dropdown-menu">
+
+              <Link to="/category/shoes">Shoes</Link>
+              <Link to="/category/slippers">Slippers</Link>
+
+            </div>
+          </div>
+
+          {/* ACCESSORIES DROPDOWN */}
+          <div className="dropdown">
+            <span>Accessories</span>
+
+            <div className="dropdown-menu">
+
+              <Link to="/category/chain">Chain</Link>
+              <Link to="/category/ring">Ring</Link>
+              <Link to="/category/watch">Watch</Link>
+
+            </div>
+          </div>
 
         </div>
 
@@ -94,11 +130,20 @@ function Navbar() {
 
           <Link to="/" onClick={()=>setMobileOpen(false)}>Home</Link>
 
-          <Link to="/category/shirts" onClick={()=>setMobileOpen(false)}>Cloths</Link>
+          <p className="mobile-title">Cloths</p>
+          <Link to="/category/shirts" onClick={()=>setMobileOpen(false)}>Shirts</Link>
+          <Link to="/category/pants" onClick={()=>setMobileOpen(false)}>Pants</Link>
+          <Link to="/category/tshirts" onClick={()=>setMobileOpen(false)}>T-Shirts</Link>
+          <Link to="/category/track" onClick={()=>setMobileOpen(false)}>Trackpants</Link>
 
-          <Link to="/category/shoes" onClick={()=>setMobileOpen(false)}>Footwear</Link>
+          <p className="mobile-title">Footwear</p>
+          <Link to="/category/shoes" onClick={()=>setMobileOpen(false)}>Shoes</Link>
+          <Link to="/category/slippers" onClick={()=>setMobileOpen(false)}>Slippers</Link>
 
-          <Link to="/category/watch" onClick={()=>setMobileOpen(false)}>Accessories</Link>
+          <p className="mobile-title">Accessories</p>
+          <Link to="/category/chain" onClick={()=>setMobileOpen(false)}>Chain</Link>
+          <Link to="/category/ring" onClick={()=>setMobileOpen(false)}>Ring</Link>
+          <Link to="/category/watch" onClick={()=>setMobileOpen(false)}>Watch</Link>
 
           <hr/>
 

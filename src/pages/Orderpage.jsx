@@ -56,15 +56,24 @@ function OrderPage() {
 
         <div className="order-products">
 
-          {cart.map((item) => (
+          {cart.map((item, index) => (
 
-            <div key={item.id} className="order-item">
+            <div key={index} className="order-item">
 
               <img src={item.image} alt={item.name} />
 
               <div>
+
                 <h4>{item.name}</h4>
+
                 <p>₹{item.price}</p>
+
+                {item.selectedSize && (
+                  <p className="order-size">
+                    Size: {item.selectedSize}
+                  </p>
+                )}
+
               </div>
 
             </div>
@@ -103,6 +112,7 @@ function OrderPage() {
     </div>
 
   );
+
 }
 
 export default OrderPage;
